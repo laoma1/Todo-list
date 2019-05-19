@@ -5,7 +5,6 @@ public class User{
     private  String content;
     private String createdTime;
 
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -17,6 +16,7 @@ public class User{
     public void setContent(String content) {
         this.content = content;
     }
+    
     public String getContent() {
         return content;
     }
@@ -29,7 +29,7 @@ public class User{
         return createdTime;
     }
 
-public User(Long id, String content, String createdTime){
+    public User(Long id, String content, String createdTime){
         this.id= id;
         this.content=content;
         this.createdTime=createdTime;
