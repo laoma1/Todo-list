@@ -12,8 +12,7 @@ public class UserController{
     List<User> r=new ArrayList(users.values());
         return r;
      }
-
-     @RequestMapping(value="/api/tasks",method=RequestMethod.POST)
+@RequestMapping(value="/api/tasks",method=RequestMethod.POST)
      public String postUser(@ModelAttribute User user){
         users.put(user.getId(),user);
         return "OK";
@@ -22,7 +21,7 @@ public class UserController{
      public User getUser(@PathVariable Long id){
       return users.get(id);
      }
-    @RequestMapping(value="/api/tasks/{id}",method=RequestMethod.DELETE)
+@RequestMapping(value="/api/tasks/{id}",method=RequestMethod.DELETE)
      public String deleteUser( @PathVariable Long id){
          users.remove(id);
          return "OK";
